@@ -256,7 +256,7 @@ phrases = [
     'look what happened to all you dumbasses running into the meat gringer'
 ]
 
-@bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.')
+@bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the `survivor` argument for 4 survivor perks instead.  Example: `?spin survivor`')
 async def spin_the_wheel(ctx, type='killer'):
     phrase = random.choice(phrases)
     killer = random.choice(killers)

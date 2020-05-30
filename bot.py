@@ -287,7 +287,7 @@ async def random_killer(ctx):
 async def gimme_salt(ctx):
     salt = random.choice(phrases)
 
-    message = '> {salt}'.format(salt=salt)
+    message = '> **{salt}**'.format(salt=salt)
     await ctx.send(message)
 
 bot.run(TOKEN)

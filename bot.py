@@ -32,7 +32,7 @@ killers = [
     'Deathslinger'
 ]
 
-perks = [
+killer_perks = [
     'A Nurse\'s Calling',
     'Agitation',
     'Bamboozle',
@@ -102,6 +102,86 @@ perks = [
     'Unrelenting',
     'Whispers',
     'Zanshin Tactics'
+]
+
+survivor_perks = [
+    'Ace in the Hole',
+    'Adrenaline',
+    'Aftercare',
+    'Alert',
+    'Any Means Necessary',
+    'Autodidact',
+    'Babysitter',
+    'Balanced Landing',
+    'Better Together',
+    'Boil Over',
+    'Bond',
+    'Borrowed Time',
+    'Botany Knowledge',
+    'Breakdown',
+    'Breakout',
+    'Buckle Up',
+    'Calm Spirit',
+    'Camaraderie',
+    'Dance With Me',
+    'Dark Sense',
+    'Dead Hard',
+    'Decisive Strike',
+    'Déjà Vu',
+    'Deliverance',
+    'Detective\'s Hunch',
+    'Distortion',
+    'Diversion',
+    'Empathy',
+    'Fixated',
+    'Flip-Flop',
+    'For the People',
+    'Head On',
+    'Hope',
+    'Inner Strength',
+    'Iron Will',
+    'Kindred',
+    'Leader',
+    'Left Behind',
+    'Lightweight',
+    'Lithe',
+    'Lucky Break',
+    'Mettle of Man',
+    'No Mither',
+    'No One Left Behind',
+    'Object of Obsession',
+    'Off the Record',
+    'Open-Handed',
+    'Pharmacy',
+    'Plunderer\'s Instinct',
+    'Poised',
+    'Premonition',
+    'Prove Thyself',
+    'Quick & Quiet',
+    'Red Herring',
+    'Resilience',
+    'Saboteur',
+    'Second Wind',
+    'Self-Care',
+    'Slippery Meat',
+    'Small Game',
+    'Sole Survivor',
+    'Solidarity',
+    'Spine Chill',
+    'Sprint Burst',
+    'Stake Out',
+    'Streetwise',
+    'This Is Not Happening',
+    'Technician',
+    'Tenacity',
+    'Up the Ante',
+    'Unbreakable',
+    'Urban Evasion',
+    'Vigil',
+    'Wake Up!',
+    'We\'ll Make It',
+    'We\'re Gonna Live Forever',
+    'Windows of Opportunity'
 ]
 
 phrases = [
@@ -180,7 +260,7 @@ phrases = [
 async def spin_the_wheel(ctx):
     phrase = random.choice(phrases)
     killer = random.choice(killers)
-    perk_list = random.sample(perks, 4)
+    perk_list = random.sample(killer_perks, 4)
 
     perk_string = ''
 
@@ -195,6 +275,12 @@ async def spin_the_wheel(ctx):
 {perks}
 """.format(phrase=phrase, killer=killer, perks=perk_string)
 
+    await ctx.send(message)
+
+@bot.command(name="killer", help="Get a random killer.")
+async def random_killer(ctx):
+    message='Random killer: **{killer}**'.format(killer=random.choice(killers))
+    
     await ctx.send(message)
 
 @bot.command(name='salt')

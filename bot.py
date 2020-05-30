@@ -257,23 +257,34 @@ phrases = [
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.')
-async def spin_the_wheel(ctx):
+async def spin_the_wheel(ctx, type='killer'):
     phrase = random.choice(phrases)
     killer = random.choice(killers)
-    perk_list = random.sample(killer_perks, 4)
+    message = 'Invalid argument provided.  Valid arguments are: `killer` or `survivor`.  Example: `?spin survivor`'
 
-    perk_string = ''
+    def get_formatted_perks(list):
+        perk_list = random.sample(list, 4)
+        perk_string = ''
 
-    for item in perk_list:
-        perk_string += item + '\n'
+        for item in perk_list:
+            perk_string += item + '\n'
+        return perk_string
 
-    message = """
+    if type.lower() == 'survivor':
+        message = """
+> **{phrase}**\n
+**Survivor Perks:**  
+{perks}
+""".format(phrase=phrase, perks=get_formatted_perks(survivor_perks))
+
+    if type.lower() == 'killer':
+        message = """
 > **{phrase}**\n
 **Killer:**  
 {killer}\n
 **Perks:**  
 {perks}
-""".format(phrase=phrase, killer=killer, perks=perk_string)
+""".format(phrase=phrase, killer=killer, perks=get_formatted_perks(killer_perks))
 
     await ctx.send(message)
 

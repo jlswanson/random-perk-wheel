@@ -253,7 +253,8 @@ phrases = [
     'sup of our flesh master',
     'you suck james charles off',
     'you look more like a real life dwight',
-    'look what happened to all you dumbasses running into the meat gringer'
+    'look what happened to all you dumbasses running into the meat gringer',
+    'I know you like to suck rank 2 dicks but maybe get better on your own first'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the `survivor` argument for 4 survivor perks instead.  Example: `?spin survivor`')

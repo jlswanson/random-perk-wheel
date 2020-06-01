@@ -212,7 +212,7 @@ phrases = [
     'kenan, you are very unnatractive',
     'you look like an absolute cuck',
     'I really wanna kill your mother',
-    'Rep camping piece of :heart: :heart: :heart: :heart: delete the game',
+    'camping piece of :heart: :heart: :heart: :heart: delete the game',
     'cool 10 year old, mommy really love you right bet she would love to take my bbc all night. get off my friends list',
     'I think Kenan is actually braindead.',
     'your profile pic literally looks like youre a 14 hyear old gay pirate musician who is on his way to court for undisclosed charges...',
@@ -259,7 +259,11 @@ phrases = [
     'why the fuck u so ugly',
     'ur face looks like a hairy vagina with those lips',
     'god ur a pussy',
-    'answer the call inbred'
+    'answer the call inbred',
+    'u camping very gross xD',
+    'jake you really like attention huh fat freadk',
+    'go wipe your ass don\'t gg me bitch',
+    'fuckin premade trash cans'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

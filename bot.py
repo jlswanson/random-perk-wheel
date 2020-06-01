@@ -221,7 +221,7 @@ phrases = [
     'you play like a bitch honestly',
     'you look like a serial killer',
     'how about you shove a rusty fork up your dick next time instead',
-    'You made the conscious decision, to be a deliberate dick.'
+    'You made the conscious decision, to be a deliberate dick.',
     'haha bitch boy',
     'u a chick or a dude?',
     'ooh it\'s the ugly guy that plays like a stupid bitch',

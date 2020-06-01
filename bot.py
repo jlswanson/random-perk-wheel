@@ -1,12 +1,24 @@
 import os
-
 import random
+import uuid
+
 import discord
 from discord.ext import commands
+
 from dotenv import load_dotenv
+
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+
+# get this quote db going
+cred = credentials.Certificate('salty-quotes.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
 
 bot = commands.Bot(command_prefix='?')
 
@@ -127,7 +139,7 @@ survivor_perks = [
     'Dark Sense',
     'Dead Hard',
     'Decisive Strike',
-    'Déjà Vu',
+    'Deja Vu',
     'Deliverance',
     'Detective\'s Hunch',
     'Distortion',
@@ -261,6 +273,17 @@ phrases = [
     'god ur a pussy',
     'answer the call inbred'
 ]
+
+quotes = db.collection(u'quotes')
+
+key = quotes.doc().id
+
+quotes.where(admin.firestore.FieldPath.documentId(), '>=', key)
+# print(quotes)
+# for item in phrases:
+#     quotes.add({
+#         'value': item
+#     })
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):

@@ -254,10 +254,15 @@ phrases = [
     'you suck james charles off',
     'you look more like a real life dwight',
     'look what happened to all you dumbasses running into the meat gringer',
-    'I know you like to suck rank 2 dicks but maybe get better on your own first'
+    'I know you like to suck rank 2 dicks but maybe get better on your own first',
+    'you like anime men',
+    'why the fuck u so ugly',
+    'ur face looks like a hairy vagina with those lips',
+    'god ur a pussy',
+    'answer the call inbred'
 ]
 
-@bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the `survivor` argument for 4 survivor perks instead.  Example: `?spin survivor`')
+@bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):
     phrase = random.choice(phrases)
     killer = random.choice(killers)

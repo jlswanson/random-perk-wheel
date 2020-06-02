@@ -265,7 +265,9 @@ phrases = [
     'go wipe your ass don\'t gg me bitch',
     'fuckin premade trash cans',
     'nice vpn, does it come in mens?',
-    'UwU owO ;m; :3 stfu hore'
+    'UwU owO ;m; :3 stfu hore',
+    'fucking bumm ass camper',
+    'SpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicy'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

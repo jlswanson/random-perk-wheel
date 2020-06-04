@@ -267,7 +267,10 @@ phrases = [
     'nice vpn, does it come in mens?',
     'UwU owO ;m; :3 stfu hore',
     'fucking bumm ass camper',
-    'SpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicy'
+    'SpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicySpicy',
+    'Fucking weirdo',
+    'your profile makes you look like a douche',
+    'how much did you pay for that account?'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

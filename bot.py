@@ -273,7 +273,9 @@ phrases = [
     'how much did you pay for that account?',
     'i\'m sorry your dick is so small',
     'shame eugenics failed on your trash gene pool',
-    'this dudes a POOCH'
+    'this dudes a POOCH',
+    'fuck you kenan you smug piece of shit',
+    'jesus christ your sound mormon as fuck'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

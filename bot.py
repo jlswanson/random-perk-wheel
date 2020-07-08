@@ -29,7 +29,8 @@ killers = [
     'Ghost Face',
     'Demogorgon',
     'Oni',
-    'Deathslinger'
+    'Deathslinger',
+    'Executioner'
 ]
 
 killer_perks = [
@@ -48,12 +49,14 @@ killer_perks = [
     'Cruel Limits',
     'Dark Devotion',
     'Dead Man\'s Switch',
+    'Deathbound',
     'Deerstalker',
     'Discordance',
     'Distressing',
     'Dying Light',
     'Enduring',
     'Fire Up',
+    'Forced Penance',
     'Franklin\'s Demise',
     'Furtive Chase',
     'Gearhead',
@@ -98,6 +101,7 @@ killer_perks = [
     'Tinkerer',
     'Thanatophobia',
     'Thrilling Tremors',
+    'Trail of Torment',
     'Unnerving Presence',
     'Unrelenting',
     'Whispers',
@@ -114,6 +118,7 @@ survivor_perks = [
     'Babysitter',
     'Balanced Landing',
     'Better Together',
+    'Blood Pact',
     'Boil Over',
     'Bond',
     'Borrowed Time',
@@ -159,6 +164,7 @@ survivor_perks = [
     'Prove Thyself',
     'Quick & Quiet',
     'Red Herring',
+    'Repressed Alliance',
     'Resilience',
     'Saboteur',
     'Second Wind',
@@ -167,6 +173,7 @@ survivor_perks = [
     'Small Game',
     'Sole Survivor',
     'Solidarity',
+    'Soul Guard',
     'Spine Chill',
     'Sprint Burst',
     'Stake Out',

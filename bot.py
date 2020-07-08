@@ -206,7 +206,7 @@ phrases = [
     'ole missing chromosome headas',
     'lookin like a trans karen',
     'WHO TOUCHED YOU',
-    'yo Kenan, bet you look like the killer too.  git gud. gg@Bill.',
+    'yo Kenan, bet you look like the killer too.  git gud.',
     'You give a bad rep to all kenans',
     'don\'t smile at me',
     'i see you pointing hoe',
@@ -284,7 +284,10 @@ phrases = [
     'fuck you kenan you smug piece of shit',
     'jesus christ your sound mormon as fuck',
     'ufff tsk tsk tsk you suck :)',
-    'girl i just know your coochie stinks'
+    'girl i just know your coochie stinks',
+    'end ur petty life',
+    'Go die in a fire',
+    'you have no siginificant otehr you smelly whore'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

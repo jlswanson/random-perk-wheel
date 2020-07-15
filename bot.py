@@ -290,7 +290,9 @@ phrases = [
     'you have no siginificant otehr you smelly whore',
     'youre trashh meanie camper killer',
     'shut up mother fucker noob',
-    'you actually sweat hardcore kys kid'
+    'you actually sweat hardcore kys kid',
+    'ur ugly. unironically ugly. go back to reddit.',
+    'cock smoker'
 ]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')

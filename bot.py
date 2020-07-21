@@ -70,7 +70,7 @@ killer_perks = [
     'Hex: The Third Seal',
     'Hex: Thrill of the Hunt',
     'I\'m All Ears',
-    'Infections Fright',
+    'Infectious Fright',
     'Insidious',
     'Iron Grasp',
     'Iron Maiden',

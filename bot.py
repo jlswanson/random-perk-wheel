@@ -310,26 +310,26 @@ async def spin_the_wheel(ctx, type='killer'):
         return perk_string
 
     if type.lower() == 'survivor':
-        message = """
+        message = f"""
 > **{phrase}**\n
 **Survivor Perks:**  
-{perks}
-""".format(phrase=phrase, perks=get_formatted_perks(survivor_perks))
+{get_formatted_perks(survivor_perks)}
+"""
 
     if type.lower() == 'killer':
-        message = """
+        message = f"""
 > **{phrase}**\n
 **Killer:**  
 {killer}\n
 **Perks:**  
-{perks}
-""".format(phrase=phrase, killer=killer, perks=get_formatted_perks(killer_perks))
+{get_formatted_perks(killer_perks)}
+"""
 
     await ctx.send(message)
 
 @bot.command(name="killer", help="Get a random killer.")
 async def random_killer(ctx):
-    message='Random killer: **{killer}**'.format(killer=random.choice(killers))
+    message = f'Random killer: **{random.choice(killers)}**'
     
     await ctx.send(message)
 
@@ -337,7 +337,7 @@ async def random_killer(ctx):
 async def gimme_salt(ctx):
     salt = random.choice(phrases)
 
-    message = '> **{salt}**'.format(salt=salt)
+    message = f'> **{salt}**'
     await ctx.send(message)
 
 bot.run(TOKEN)

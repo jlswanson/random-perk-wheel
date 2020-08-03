@@ -1,4 +1,5 @@
 import os
+import json
 
 import random
 import discord
@@ -10,8 +11,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-# Use a service account
-cred = credentials.Certificate('./salty-quotes.json')
+CONFIG = json.loads(os.getenv('FIREBASE_CONFIG'))
+cred = credentials.Certificate(CONFIG)
+
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()

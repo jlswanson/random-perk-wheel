@@ -5,6 +5,18 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+# firebase
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+# Use a service account
+cred = credentials.Certificate('./salty-quotes.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+quotes = db.collection('quotes')
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -296,9 +308,27 @@ phrases = [
     'nice acne kenan'
 ]
 
+def get_salt():
+    key = quotes.document().id
+    # get a single document
+    query = quotes.where(db.field_path('value'), '>=', key).limit(1).stream()
+
+    single_salt = ''
+
+    # doc comes back as generator object
+    for q in query:
+        dict = q.to_dict()
+        values = dict.values()
+        iterator = iter(values)
+        first = next(iterator)
+        single_salt = first
+    
+    print(single_salt)
+    return single_salt
+
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):
-    phrase = random.choice(phrases)
+    phrase = get_salt()
     killer = random.choice(killers)
     message = 'Invalid argument provided.  Valid arguments are: `killer` or `survivor`.  Example: `?spin survivor`'
 
@@ -336,7 +366,7 @@ async def random_killer(ctx):
 
 @bot.command(name='salt')
 async def gimme_salt(ctx):
-    salt = random.choice(phrases)
+    salt = get_salt()
 
     message = f'> **{salt}**'
     await ctx.send(message)

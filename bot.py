@@ -212,19 +212,17 @@ survivor_perks = [
 def get_salt():
     key = quotes.document().id
     # get a single document
-    query = quotes.where(db.field_path('value'), '>=', key).limit(1).stream()
+    query = quotes.where(db.field_path('value'), '>=', key).order_by('value', 'ASCENDING').limit(10).stream()
 
-    single_salt = ''
+    random_index = random.randint(0, 9)
+    query_list = []
 
     # doc comes back as generator object
     for q in query:
-        dict = q.to_dict()
-        values = dict.values()
-        iterator = iter(values)
-        first = next(iterator)
-        single_salt = first
+        value = q.get('value')
+        query_list.append(value)
     
-    return single_salt
+    return query_list[random_index]
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):

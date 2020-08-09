@@ -209,24 +209,22 @@ survivor_perks = [
     'Windows of Opportunity'
 ]
 
-def get_salt():
-    key = quotes.document().id
-    # get a single document
-    query = quotes.where(db.field_path('value'), '>=', key).order_by('value', 'ASCENDING').limit(10).stream()
+salt_supply = []
 
-    random_index = random.randint(0, 9)
-    query_list = []
+def get_salt():
+    # get all documents
+    query = quotes.stream()
 
     # doc comes back as generator object
     for q in query:
         value = q.get('value')
-        query_list.append(value)
-    
-    return query_list[random_index]
+        salt_supply.append(value)
+
+get_salt()
 
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):
-    phrase = get_salt()
+    phrase = random.choice(salt_supply)
     killer = random.choice(killers)
     message = 'Invalid argument provided.  Valid arguments are: `killer` or `survivor`.  Example: `?spin survivor`'
 
@@ -264,7 +262,7 @@ async def random_killer(ctx):
 
 @bot.command(name='salt')
 async def gimme_salt(ctx):
-    salt = get_salt()
+    salt = random.choice(salt_supply)
 
     message = f'> **{salt}**'
     await ctx.send(message)

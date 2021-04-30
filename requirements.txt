@@ -29,7 +29,7 @@ pyasn1-modules==0.2.8
 python-dotenv==0.13.0
 pytz==2020.1
 requests==2.23.0
-rsa==4.0
+rsa==4.7
 six==1.15.0
 typing-extensions==3.7.4.2
 uritemplate==3.0.1

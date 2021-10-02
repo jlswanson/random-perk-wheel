@@ -222,6 +222,14 @@ def get_salt():
 
 get_salt()
 
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    if 'you like' or 'You like' in message.content:
+        await message.channel.send('You like this?')
+
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):
     phrase = random.choice(salt_supply)

@@ -27,6 +27,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 # initialize the bot with a prefix
 bot = commands.Bot(command_prefix='?')
+client = discord.Client()
 
 killers = [
     'Trapper',
@@ -222,14 +223,6 @@ def get_salt():
 
 get_salt()
 
-@bot.event
-async def on_message(message):
-    if message.author.bot:
-        return
-
-    if 'you like' or 'You like' in message.content:
-        await message.channel.send('You like this?')
-
 @bot.command(name='spin', help='Spin the wheel!  Get a random killer and four random perks.  Optionally pass in the survivor argument for 4 survivor perks instead.  Example: ?spin survivor')
 async def spin_the_wheel(ctx, type='killer'):
     phrase = random.choice(salt_supply)
@@ -274,5 +267,13 @@ async def gimme_salt(ctx):
 
     message = f'> **{salt}**'
     await ctx.send(message)
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if 'you like?' in message.content.lower():
+        await message.channel.send('You like this?')
 
 bot.run(TOKEN)

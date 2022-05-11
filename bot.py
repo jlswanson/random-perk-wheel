@@ -191,7 +191,7 @@ survivor_perks = [
     'Dead Hard',
     'Deception',
     'Decisive Strike',
-    'Déjà Vu',
+    'Deja Vu',
     'Deliverance',
     'Desperate Measures',
     'Detective\'s Hunch',
@@ -320,12 +320,12 @@ async def gimme_salt(ctx):
     message = f'> **{salt}**'
     await ctx.send(message)
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+# @client.event
+# async def on_message(message):
+#     if message.author == client.user:
+#         return
 
-    if 'you like?' in message.content.lower():
-        await message.channel.send('You like this?')
+#     if 'you like?' in message.content.lower():
+#         await message.channel.send('You like this?')
 
 bot.run(TOKEN)

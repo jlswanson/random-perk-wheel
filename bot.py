@@ -447,7 +447,11 @@ These are your players:\n"""
         return msg.author == ctx.author
 
     # TODO: This still hits the timeout when replying to dm, need to fix.
-    msg = await client.wait_for('message', check=check, timeout=30.0)
+    try:
+        msg = await client.wait_for('message', check=check, timeout=30.0)
+    except:
+        await ctx.send(f'I didn\'t receive your message in time.  The round will start without you.')
+
     reply = int(msg.lower) - 1
 
     rouletteItem = next(item for items in roulette if item['id'] == msg.author['id'])

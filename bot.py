@@ -362,8 +362,7 @@ armor_passive = [
 
 primary_weapon = [
     'AR-23 Liberator',
-    'AR-23P Liberator',
-    'Penetrator',
+    'AR-23P Liberator Penetrator',
     'AR-23C Liberator Concussive',
     'AR-23A Liberator Carbine',
     'AR-61 Tenderizer',

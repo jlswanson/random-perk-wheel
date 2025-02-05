@@ -348,6 +348,8 @@ armor_weight = [
 ]
 
 armor_passive = [
+    'Acclimated',
+    'Advanced Filtration',
     'Democracy Protects',
     'Electrical Conduit',
     'Engineering Kit',
@@ -357,28 +359,36 @@ armor_passive = [
     'Med-Kit',
     'Peak Physique',
     'Scout',
-    'Servo-Assisted'
+    'Servo-Assisted',
+    'Unfliching',
+    'Siege-Ready'
 ]
 
 primary_weapon = [
     'AR-23 Liberator',
     'AR-23P Liberator Penetrator',
     'AR-23C Liberator Concussive',
+    'StA-52 Assault Rifle',
     'AR-23A Liberator Carbine',
     'AR-61 Tenderizer',
     'BR-14 Adjudicator',
+    'R-2124 Constitution',
     'R-63 Diligence',
     'R-63CS Diligence Counter Sniper',
+    'PLAS-39 Accelerator Rifle',
+    'MP-98 Knight',
+    'StA-11 SMG',
+    'SMG-32 Reprimand',
     'SMG-37 Defender',
     'SMG-72 Pummeler',
     'SG-8 Punisher',
     'SG-8S Slugger',
+    'SG-20 Halt',
     'SG-451 Cookout',
     'SG-225 Breaker',
     'SG-225SP Breaker Spray & Pray',
     'SG-225IE Breaker Incendiary',
     'CB-9 Exploding Crossbow',
-    'JAR-5 Dominator',
     'R-36 Eruptor',
     'SG-8P Punisher Plasma',
     'ARC-12 Blitzer',
@@ -386,7 +396,8 @@ primary_weapon = [
     'LAS-16 Sickle',
     'PLAS-1 Scorcher',
     'PLAS-101 Purifier',
-    'FLAM-66 Torcher'
+    'FLAM-66 Torcher',
+    'JAR-5 Dominator'
 ]
 
 secondary_weapon = [
@@ -394,10 +405,14 @@ secondary_weapon = [
     'P-19 Redeemer',
     'P-113 Verdict',
     'P-4 Senator',
+    'CQC-19 Stun Lance',
+    'CQC-30 Stun Baton',
+    'P-11 Stim Pistol',
     'SG-22 Bushwhacker',
     'P-72 Crisper',
     'GP-31 Grenade Pistol',
-    'LAS-7 Dagger'
+    'LAS-7 Dagger',
+    'PLAS-15 Loyalist'
 ]
 
 throwable = [
@@ -407,6 +422,7 @@ throwable = [
     'G-16 Impact',
     'G-13 Incendiary Impact',
     'G-23 Stun',
+    'G-4 Gas',
     'G-3 Smoke',
     'G-123 Thermite',
     'K-2 Throwing Knife'
@@ -425,6 +441,7 @@ stratagem = [
     'Eagle Cluster Bomb',
     'Orbital Smoke Strike',
     'Orbital Airburst Strike',
+    'Orbital Napalm Barrage',
     'Orbital Laser',
     'Orbital Precision Strike',
     'Orbital 380mm HE Barrage',
@@ -440,21 +457,28 @@ stratagem = [
     'SH-32 Shield Generator Pack',
     'RL-77 Airburst Rocket Launcher',
     'RS-422 Railgun',
+    'TX-41 Sterilizer',
     'LAS-98 Laser Cannon',
+    'SH-51 Directional Shield',
     'ARC-3 Arc Thrower',
     'AX/AR-23 "Guard Dog"',
     'FAF-14 Spear',
     'GL-21 Grenade Launcher',
     'MG-43 Machine Gun',
     'SH-20 Ballistic Shield Backpack',
+    'StA-X3 W.A.S.P. Launcher',
     'B-1 Supply Pack',
+    'M-102 Fast Recon Vehicle',
     'FLAM-40 Flamethrower',
     'AX/LAS-5 "Guard Dog" Rover',
     'GR-8 Recoilless Rifle',
     'LIFT-850 Jump Pack',
     'APW-1 Anti-Materiel Rifle',
+    'AX/TX-13 "Guard Dog" Dog Breath',
     'EAT-17 Expendable Anti-Tank',
     'LAS-99 Quasar Cannon',
+    'A/FLAM-40 Flame Sentry',
+    'E/AT-12 Anti-Tank Emplacement',
     'MD-17 Anti-Tank Mines',
     'FX-12 Shield Generator Relay',
     'A/M-23 EMS Mortar Sentry',
@@ -481,7 +505,9 @@ booster = [
     'Expert Extraction Pilot',
     'Motivational Shocks',
     'Experimental Infusion',
-    'Firebomb Hellpods'
+    'Firebomb Hellpods',
+    'Dead Sprint',
+    'Armed Resupply Pods'
 ]
 
 mission_type = [
@@ -490,7 +516,6 @@ mission_type = [
     'Emergency Evacuation',
     'Evacuate High-Value Assets (Defense Exclusive)',
     'Launch ICBM',
-    'Retrieve Essential Personnel (Defense Exclusive)',
     'Retrieve Valuable Data',
     'Spread Democracy',
     'Purge Hatcheries','Enable E-710 Extraction',
@@ -501,6 +526,22 @@ mission_type = [
     'Destroy Command Bunkers',
     'Neutralize Orbital Defenses'
 ]
+
+# Servants of Freedom Warbond
+# Armor Passive
+# Integrated Explosives
+
+# Primary Weapon
+# LAS-17 Double-Edge Sickle
+
+# Secondary Weapon
+# GP-31 Ultimatium
+
+# Throwable
+# G-50 Seeker
+
+# Stratagem
+# B-100 Portable Hellbomb
 
 @bot.command(name="freedom", help="Test your commitment to democracy, Helldiver.")
 async def random_loadout(ctx):

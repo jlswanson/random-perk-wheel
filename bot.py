@@ -361,7 +361,8 @@ armor_passive = [
     'Scout',
     'Servo-Assisted',
     'Unfliching',
-    'Siege-Ready'
+    'Siege-Ready',
+    'Integrated Explosives'
 ]
 
 primary_weapon = [
@@ -394,6 +395,7 @@ primary_weapon = [
     'ARC-12 Blitzer',
     'LAS-5 Scythe',
     'LAS-16 Sickle',
+    'LAS-17 Double-Edge Sickle',
     'PLAS-1 Scorcher',
     'PLAS-101 Purifier',
     'FLAM-66 Torcher',
@@ -412,6 +414,7 @@ secondary_weapon = [
     'P-72 Crisper',
     'GP-31 Grenade Pistol',
     'LAS-7 Dagger',
+    'GP-31 Ultimatium',
     'PLAS-15 Loyalist'
 ]
 
@@ -423,6 +426,7 @@ throwable = [
     'G-13 Incendiary Impact',
     'G-23 Stun',
     'G-4 Gas',
+    'G-50 Seeker',
     'G-3 Smoke',
     'G-123 Thermite',
     'K-2 Throwing Knife'
@@ -471,6 +475,7 @@ stratagem = [
     'M-102 Fast Recon Vehicle',
     'FLAM-40 Flamethrower',
     'AX/LAS-5 "Guard Dog" Rover',
+    'B-100 Portable Hellbomb',
     'GR-8 Recoilless Rifle',
     'LIFT-850 Jump Pack',
     'APW-1 Anti-Materiel Rifle',
@@ -526,22 +531,6 @@ mission_type = [
     'Destroy Command Bunkers',
     'Neutralize Orbital Defenses'
 ]
-
-# Servants of Freedom Warbond
-# Armor Passive
-# Integrated Explosives
-
-# Primary Weapon
-# LAS-17 Double-Edge Sickle
-
-# Secondary Weapon
-# GP-31 Ultimatium
-
-# Throwable
-# G-50 Seeker
-
-# Stratagem
-# B-100 Portable Hellbomb
 
 @bot.command(name="freedom", help="Test your commitment to democracy, Helldiver.")
 async def random_loadout(ctx):

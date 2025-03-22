@@ -362,7 +362,8 @@ armor_passive = [
     'Servo-Assisted',
     'Unfliching',
     'Siege-Ready',
-    'Integrated Explosives'
+    'Integrated Explosives',
+    'Gunslinger'
 ]
 
 primary_weapon = [
@@ -399,7 +400,8 @@ primary_weapon = [
     'PLAS-1 Scorcher',
     'PLAS-101 Purifier',
     'FLAM-66 Torcher',
-    'JAR-5 Dominator'
+    'JAR-5 Dominator',
+    'R-6 Deadeye'
 ]
 
 secondary_weapon = [
@@ -415,7 +417,8 @@ secondary_weapon = [
     'GP-31 Grenade Pistol',
     'LAS-7 Dagger',
     'GP-31 Ultimatium',
-    'PLAS-15 Loyalist'
+    'PLAS-15 Loyalist',
+    'LAS-58 Talon'
 ]
 
 throwable = [
@@ -429,7 +432,8 @@ throwable = [
     'G-50 Seeker',
     'G-3 Smoke',
     'G-123 Thermite',
-    'K-2 Throwing Knife'
+    'K-2 Throwing Knife',
+    'TED-63 Dynamite'
 ]
 
 stratagem = [
@@ -495,7 +499,9 @@ stratagem = [
     'A/MG-43 Machine Gun Sentry',
     'A/AC-8 Autocannon Sentry',
     'MD-14 Incendiary Mines',
-    'E/MG-101 HMG Emplacement'
+    'E/MG-101 HMG Emplacement',
+    'B-100 LIFT-860 Hover Pack',
+    'MD-8 Gas Mines'
 ]
 
 booster = [
@@ -512,7 +518,8 @@ booster = [
     'Experimental Infusion',
     'Firebomb Hellpods',
     'Dead Sprint',
-    'Armed Resupply Pods'
+    'Armed Resupply Pods',
+    'Sample Extricator'
 ]
 
 mission_type = [

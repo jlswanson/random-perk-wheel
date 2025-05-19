@@ -575,4 +575,12 @@ async def random_mission(ctx):
 
     await ctx.send(message)
 
+@bot.command(name="primary", help="Let Super Earth Command guide your hand.")
+async def random_primary(ctx):
+    message = f"""
+    Eliminate Democracy's greatest threats with the power of the **{random.choice(primary_weapon)}**. 
+    """
+
+    await ctx.send(message)
+
 bot.run(TOKEN)
